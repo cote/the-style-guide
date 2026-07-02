@@ -67,13 +67,11 @@ directory holds:
 - **`general.md`** - always loaded when this style is picked. Voice /
   approach / word choice / anti-patterns / self-edit checklist.
 - **Content-type siblings** - loaded on top of `general.md` when the
-  task matches. Example content types for a prose style:
-  `blog.md`, `newsletter.md`, `social-post.md`, `professional.md`,
-  `deadpan-list.md`. A style can name whatever content types make
-  sense for it.
-
-Example: `styles/cote/general.md` + `styles/cote/blog.md` +
-`styles/cote/newsletter.md` + `styles/cote/social-post.md`.
+  task matches. A style names whatever content types make sense for
+  it. In `styles/cote/` the siblings are `casual-voice.md`,
+  `professional-voice.md`, `deadpan-list-essay.md`, and
+  `social-media.md`. Another prose style might pick `blog.md`,
+  `newsletter.md`, `keynote.md` instead.
 
 Pick multi-file when the style really does behave differently by
 content type. Pick single-file when it doesn't.

@@ -212,7 +212,7 @@ just a human LinkedIn cliché:
 - "it's not about X, it's about Y"
 
 **Fix:** The last one is especially over-used - the "not X, but Y"
-sentence shape (see also `references/ai-writing-tells.md`). Rewrite
+sentence shape (see also `../../references/ai-writing-tells.md`). Rewrite
 as a direct claim.
 
 ## Structural tells beyond phrases

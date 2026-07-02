@@ -136,7 +136,7 @@ cowardice. Cut the second, keep the first.
 
 ## Anti-patterns
 
-The big ones (full list in `SKILL.md` and `references/no-signposting.md`):
+The big ones (full list in `SKILL.md` and `../../references/no-signposting.md`):
 
 - Grand-declaration opener.
 - End-of-piece summary recap.

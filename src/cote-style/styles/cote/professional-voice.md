@@ -101,7 +101,7 @@ These show up more in formal writing because the formality gives them cover. Cut
 9. **The staccato fragment drumroll.** Chained fragments performing emphasis. "Sixty people. $7.5 million a year. Every year." Fold them back into a single sentence with commas: "Sixty people and $7.5 million a year, every year, is what it costs..."
 10. **The bare-name historical drop.** "Ricardo had this in 1817." Fold the attribution into a sentence that says what the idea is.
 11. **Speaking inside a framework's vocabulary.** "Commodity belongs on the right of the map." Don't assume the reader is already inside Wardley/DDD/Jevons. State the principle in plain terms; name the framework as a pointer for readers who want to go deeper.
-12. **Signposting / meta-talk.** Biggest tell of AI-drafted formal writing. See `references/no-signposting.md`.
+12. **Signposting / meta-talk.** Biggest tell of AI-drafted formal writing. See `../../references/no-signposting.md`.
 
 ## The unifying principle
 
