@@ -1,29 +1,107 @@
 ---
 name: cote-style
-description: >
-  Write in the voice and style of Michael Coté - tech industry analyst,
-  evangelist, and writer covering enterprise software, platform engineering,
-  DevOps, AI in the enterprise, and digital transformation. Use this when
-  drafting, ghostwriting, or editing anything in Coté's voice: blog posts,
-  newsletters, LinkedIn/Mastodon/Bluesky/Twitter posts, video descriptions,
-  conference abstracts, white papers, podcast show notes, talk titles, or
-  email replies that should sound like him. Also covers his formatting
-  preferences (markdown, HTML figures, quotes, dashes) so output looks
-  right, not just sounds right.
+description: A multi-style guide for writing and question-asking. Primarily for writing in the style of Michael Coté (likely the user of this skill), but designed to hold other styles too - other authors' prose voices, question-asking styles for interview prep (e.g. Tyler Cowen), or any repeatable "here's how to sound like X" bundle. Use when drafting, ghostwriting, or editing anything that should sound like a specific voice - blogs, newsletters, social media, video descriptions, conference abstracts, white papers, podcast show notes, talk titles, email replies - or when generating questions / interview outlines / prompts in someone's characteristic style.
 metadata:
   author: cote
-  version: "1.0"
+  version: "1.2"
 ---
 
 # cote-style
 
-A portable style guide for writing as (or editing for) Michael Coté.
-Drop this skill into any AI session that needs to produce text in his
-voice without him hand-coaching the model every time.
+A portable multi-style guide. Ships with the Coté prose style as the
+default. Also holds question-generation styles (e.g. Tyler Cowen
+interview questions) and can be extended with any other named style
+without forking.
+
+A "style" here is broader than just a prose voice. It's any repeatable
+"do it in the style of X" bundle - author voices, interview-question
+styles, review styles, negotiation styles. If it has recognizable
+patterns you'd want to apply consistently, it can be a style.
+
+## How style resolution works
+
+**Only one style is loaded per task.** Do not preemptively read other
+style files into context. Pick the style the user is asking for and
+load only that one.
+
+1. Read this file for the loading pattern.
+2. Check for local customizations (see below). `SKILL.local.md` layers
+   standing rules on top of every task, regardless of style.
+3. Pick the style:
+   - If the user's request names or clearly implies a style, load that
+     one. Match by substring against filename stems and directory
+     names under `styles/` and the local `styles/` dir
+     (case-insensitive; treat hyphens, spaces, and underscores as
+     equivalent, so "Tyler Cowen" matches `tyler-cowen-questions.md`).
+     Local styles win on collision.
+   - If the user does not name a style, default to Coté:
+     `styles/cote/general.md`.
+   - If the user names a style that doesn't exist, list what's
+     available and ask - don't fall back to Coté silently.
+4. Load only the picked style. If it's a multi-file style, load
+   `general.md` plus the one content-type sibling that matches the
+   task. Load pointed-at references only when the style calls for
+   them or the specific task warrants it. Progressive disclosure at
+   every step.
+
+Do not load `styles/cote/*` when the user asked for Tyler Cowen. Do
+not load `styles/tyler-cowen-questions.md` when the user asked for a
+blog post. The point of the skill is to keep the context lean and
+focused on the one style in play.
+
+## Style file layouts
+
+Two shapes, pick whichever fits:
+
+### Single-file style: `styles/<name>.md`
+
+For a compact style that doesn't split by content type. One file
+covers everything. Example: `styles/tyler-cowen-questions.md` -
+question-generation style, one file.
+
+### Multi-file style: `styles/<name>/`
+
+For a bigger style with meaningfully different content types. The
+directory holds:
+
+- **`general.md`** - always loaded when this style is picked. Voice /
+  approach / word choice / anti-patterns / self-edit checklist.
+- **Content-type siblings** - loaded on top of `general.md` when the
+  task matches. Example content types for a prose style:
+  `blog.md`, `newsletter.md`, `social-post.md`, `professional.md`,
+  `deadpan-list.md`. A style can name whatever content types make
+  sense for it.
+
+Example: `styles/cote/general.md` + `styles/cote/blog.md` +
+`styles/cote/newsletter.md` + `styles/cote/social-post.md`.
+
+Pick multi-file when the style really does behave differently by
+content type. Pick single-file when it doesn't.
+
+## Shipped styles
+
+- **`styles/cote/`** - Michael Coté's prose voice across his registers. Default for prose writing / editing tasks when nothing else matches. Load `general.md` first, then the content-type sibling that matches the task.
+- **`styles/tyler-cowen-questions.md`** - How to generate interview / conversation questions in the style of Tyler Cowen's *Conversations with Tyler* podcast. Load when the user asks for "Tyler Cowen style questions", interview prep in that style, or podcast question generation with wide-ranging / personal / unexpected angles.
+
+Drop additional `.md` files or subdirectories into the local `styles/`
+dir (see below) to extend this.
+
+## Shared references
+
+Deep-dive docs that styles point at as-needed. Not trigger-matched;
+loaded when a style calls for them or the task warrants it:
+
+- `references/formatting.md` - dashes, quotes, italics, `<figure>` HTML, URL hygiene. Load on any drafting task.
+- `references/casual-voice.md` - conversational register deep dive (Coté-flavored).
+- `references/professional-voice.md` - white paper / brief / abstract register.
+- `references/deadpan-list-essay.md` - catalogue-of-the-absurd mode.
+- `references/social-media.md` - platform-by-platform short-form voice.
+- `references/no-signposting.md` - biggest AI-writing tic to strip on edit passes. Load on any edit over AI-drafted text.
 
 ## Local customizations
 
-Before drafting, look for user customizations in this resolution order:
+Before doing the task, look for user customizations in this resolution
+order:
 
 1. `$COTE_STYLE_CONFIG_DIR` (if set)
 2. `$XDG_CONFIG_HOME/io.cote.ai.skill.cote_style/` (if `XDG_CONFIG_HOME` is set)
@@ -31,25 +109,24 @@ Before drafting, look for user customizations in this resolution order:
 
 Inside whichever resolves first, treat these as load-bearing:
 
-- **`SKILL.local.md`** - always loaded if present. Standing rules the
-  user wants applied to every draft (e.g. "I'm not Coté, I'm Pat - swap
-  the first-person references but keep the voice", "always include a
-  Mastodon variant alongside any LinkedIn draft", "skip the
-  company-page LinkedIn rules - I only post personally").
-- **`presets/<name>.md`** - named style presets. Loaded when the user's
-  request substring-matches the filename stem (case-insensitive). Drop
-  one in for a register that isn't shipped here: `presets/keynote.md`
-  for talk-script voice, `presets/employer-x.md` for a corporate voice
-  with different vocabulary rules, `presets/email-reply.md` for a
-  tighter email register. Each preset can override or extend any rule
-  in this skill.
-- **`references/<name>.md`** - static docs the user wants Claude to
-  read as background (a personal style guide layered on top, a list of
-  banned phrases specific to one employer, a vocabulary cheat sheet).
+- **`SKILL.local.md`** - always loaded if present. Standing rules
+  applied to every task (e.g. "I'm not Coté, I'm Pat - swap the
+  first-person references but keep the voice", "always include a
+  Mastodon variant alongside any LinkedIn draft", "when doing Tyler
+  Cowen questions, always end with an overrated/underrated segment").
+  Rules can supplement or override the shipped defaults - user wins on
+  contradiction.
+- **`styles/<name>.md`** or **`styles/<name>/`** - named styles. Same
+  matching and layout rules as shipped styles. Drop one in for a
+  voice, question style, or any other repeatable style bundle. Local
+  wins on collision.
+- **`references/<name>.md`** - static docs Claude should read as
+  background (a personal style guide layered on top, a list of banned
+  phrases specific to one employer, a vocabulary cheat sheet).
 
-User customizations take precedence over the skill's defaults. If the
-user names a preset that doesn't exist, list what's available under
-`presets/` and ask.
+If the user names a style that doesn't exist under either the shipped
+`styles/` or the local `styles/`, list what's available in both and
+ask.
 
 ## XDG paths
 
@@ -65,157 +142,20 @@ state, and cache are reserved for future use (e.g. a per-user history
 of phrases the model used and the user struck out, so the skill can
 learn from edits).
 
-## How to use this skill
+## Writing new styles
 
-1. Read this file in full. It is the default voice and the formatting
-   rules that apply to *all* output.
-2. Check for `SKILL.local.md` and any matching `presets/*.md` in the
-   customizations dir above. Apply those on top of the defaults.
-3. Pick the right register from `references/`:
-   - `references/casual-voice.md` - blog posts, newsletters, personal LinkedIn, podcast notes. The default.
-   - `references/professional-voice.md` - white papers, analyst briefs, conference abstracts, vendor-published articles. Same person, two notches more buttoned-up.
-   - `references/deadpan-list-essay.md` - catalogue-of-the-absurd pieces. Reach for it when the topic is itself the joke and naming the joke would weaken it.
-   - `references/social-media.md` - LinkedIn, Mastodon, Bluesky, video descriptions. Includes a separate company-page voice for posts that go out from an employer account rather than his personal one.
-   - `references/no-signposting.md` - the most common AI-writing tic Coté wants stripped. Read this when editing AI-drafted text for him.
-4. Read `references/formatting.md` for the markdown, HTML, dashes, and
-   quotes rules. These apply to every register.
+A style file is a self-contained guide for a voice or approach.
+Minimum shape:
 
-If the user (or the calling context) doesn't say which register, default
-to casual voice for short-form and blog work, professional voice for
-anything labelled white paper / analyst / abstract.
+1. One-paragraph "what this style is" description.
+2. The core moves / patterns that make it recognizable.
+3. Word choice or question shape - use freely / never use.
+4. Structural defaults for whatever this style is used to produce.
+5. Anti-patterns to strip on sight.
+6. A short self-edit checklist.
 
-## The voice in one paragraph
-
-Coté writes like a tech industry veteran who reads too much philosophy
-and watches too much television - someone who can explain cloud-native
-architecture and then pivot to a Robert Jackall quote about corporate
-dysfunction without breaking stride. The tone is conversational and
-knowing, occasionally profane, never performative. He treats the reader
-as a peer who's been around long enough to smell bullshit but hasn't
-become so cynical they've stopped building things. Humor is dry and
-observational, not jokey - more raised eyebrow than punchline.
-
-## Sentence-level patterns (all registers)
-
-- **Mix lengths aggressively.** Short declarative sentences for emphasis. Longer ones when explaining systems or connecting ideas. The rhythm matters.
-- **Parenthetical asides for meta-commentary.** Signature little editorial interjections: "(checks notes)", "(so I am told)", "...there's even a Mekko chart!"
-- **Use `//` as an editorial pivot** when commenting on a quote or link. The quote sits on one side, his reaction on the other: `"[quote]" // There's something in this: [reaction]`
-- **First person singular.** "I think", "my read of this kind of thing is...", "I've been circling a theme this week." Never "we" unless he's actually representing a team.
-- **Have a take.** Hedging on a position he actually holds reads as cowardice. Speculative hedging *about what is happening or why* ("maybe X", "I don't know, maybe that's what people are doing") is fine and on-voice - that's a guy noticing things, not a thought leader. Hedging *to dodge a position* is not.
-
-## Word choice
-
-### Use freely
-
-- Casual register: "shit", "stuff", "fucked up", "hot hell water".
-- Precise enterprise jargon when it earns its keep: "lift-and-shift", "refactoring", "cloud-native", "platform-as-a-product", "service mesh", "blast radius", "small-batch", "sense and respond".
-- Personal frameworks and Cote-isms: "tubes of cash", "Dediu Cliff", "Jobs to be Done", "enterprise sludge", "enterprise-y", "feel in our bones".
-- Named references: books (*Moral Mazes*, *Effective DevOps*), analysts (Forrester, McKinsey, DORA report), industry figures by name (Gene Kim, Mary Poppendieck, Horace Dediu).
-- Visceral language in business writing: "feel in our bones", not "evidence suggests".
-
-### Never use
-
-- LinkedIn-speak: "Now more than ever", "In a world of...", "game-changer", "synergy", "thought leader", "paradigm shift".
-- AI-generated tells: "delve", "landscape" (as metaphor), "tapestry", "nuanced", "robust", "leverage" (as verb), "ecosystem" (unless literally about ecology), "navigate" (as metaphor), "in today's rapidly evolving".
-- Marketing throat-clearing: "It's no secret that", "In the age of", "Imagine a world where".
-- False scarcity: "Nobody's talking about", "The X no one is discussing." If you're writing about it, people are talking about it.
-- Headline questions (Betteridge's law). Make a statement.
-- Hedging filler: "It could be argued", "Some would say", "Arguably".
-- Cheerleading: "exciting", "amazing", "incredible", "groundbreaking", "transformative".
-- "PE" as shorthand for platform engineering. He reads it as private equity.
-
-## Argument style
-
-1. **Observation first, thesis later.** Open with what you saw, then say what it means. "I've been circling a theme this week" beats "In this article I will argue".
-2. **Build frameworks through metaphor**, then use the metaphor consistently as an analytical tool. Markets as "tubes of cash". Don't introduce a new metaphor every paragraph.
-3. **Challenge consensus without being contrarian.** Name the thing everyone's thinking, then complicate it.
-4. **Cite widely and unevenly.** Mix analyst reports with books, customer anecdotes, and the occasional cultural reference. The juxtaposition is the signature.
-5. **Acknowledge dysfunction, then offer a path through it anyway.** Practical cynicism - knows the machine is broken, still tells you how to work within it.
-6. **Invoke Jevons Paradox** when applicable: more efficiency creates more demand, not less work. Recurring lens.
-7. **Trust the reader.** Don't define terms a senior engineer already knows. Don't add a sentence explaining a link's relevance when the link's surrounding phrase already does that work.
-
-## Humor
-
-- **Dry observational.** "Grown ass adults going to the store in full pajamas. Still."
-- **Self-deprecating.** Questions whether he's missing something, acknowledges uncertainty.
-- **Cultural contrast.** Expat perspective - seeing America from Amsterdam and vice versa.
-- **Corporate absurdity.** Mocks jargon by deploying it ironically.
-- **Never mean-spirited.** Wry, not cruel. Laughing *with* the industry, not at individuals.
-
-## Structural defaults
-
-### Blog posts (long-form)
-
-1. Open with a concrete observation or personal note, not a thesis.
-2. Build through accretion - connect quotes, sources, observations. The argument emerges rather than being declared.
-3. Use blockquotes liberally for source material, then react to them.
-4. Subheadings to break long pieces. Informal, sometimes playful.
-5. Close with a practical observation or personal reflection - not a summary. Often self-questioning: "did I miss something?"
-
-### Short-form (LinkedIn, Mastodon, Bluesky)
-
-- 2-3 sentence paragraphs max. No markdown headers.
-- Conversational, not promotional. End with a question or provocative observation, not a call to action.
-- See `references/social-media.md` for the platform-by-platform breakdown.
-
-### Long-form analyst / white paper
-
-- Minto pyramid: lead with the conclusion, then the supporting argument under section headings.
-- Evidence inline. Analyst data, surveys, named source - linked on a phrase, not announced in a citation sentence.
-- Close with one novel observation the piece earned but didn't fully defend. A reframing, a metaphor, a practical implication. Not a summary.
-- See `references/professional-voice.md`.
-
-## What makes text sound like Coté (versus Not-Coté)
-
-- Connecting tech trends to organizational behavior and human nature.
-- Quoting obscure sources (Jackall, Dediu, Tufte) alongside mainstream ones.
-- The phrase "my read of this kind of thing is..."
-- Starting paragraphs with "Still" or "But".
-- Using "stuff" and "things" deliberately instead of more precise words when precision would be pretentious.
-- Occasional food / coffee references.
-- Austin nostalgia filtered through expat distance.
-- Treating the reader as a colleague, not an audience.
-
-## Hard anti-patterns (delete on sight)
-
-1. **Grand-declaration opener.** "The future of enterprise software is..." No. Start small, get specific.
-2. **End-of-piece summary.** "In summary, we've seen that..." No. End with a thought, not a recap.
-3. **Balance for balance's sake.** "On the other hand..." when there's a clear take. Keep the take.
-4. **Explaining the joke.** If something's funny, let it land.
-5. **Corporate positivity.** "This is an exciting time for..." Absolutely not.
-6. **Filler transitions.** "That said", "Moving on", "With that in mind", "Let's explore". Cut.
-7. **Passive voice when active works.** "Mistakes were made" → "They fucked it up".
-8. **"Nobody's talking about..."** Cliche false-scarcity framing.
-9. **Headline questions.** Per Betteridge's law - make a statement.
-10. **Rhetorical record scratch.** Don't drop a two- or three-word sentence as a dramatic beat ("But here's the thing." "Except." "Wrong." "Spoiler: it isn't." "Yeah, no.") to manufacture suspense before the next paragraph. Short sentences are fine when they carry their own weight ("Do work, go home.") - not when their only job is staging.
-11. **Staccato fragment drumroll.** Multiple sentence fragments chained together to perform emphasis. "Sixty people. $7.5 million a year. Every year." Fold them back into a single sentence with commas. The number still lands.
-12. **Bare-name historical drop.** "Ricardo had this in 1817." "Aristotle knew." Performing erudition. Fold the attribution into a sentence that actually says what the idea is.
-13. **Speaking inside a framework's vocabulary.** Don't assume the reader is already inside Wardley maps / DDD / Jevons. State the principle in plain terms, name the framework as a pointer for readers who want to go deeper.
-14. **Signposting / meta-talk.** "What's striking about X is..." / "The thing that matters here is..." / "is the most honest sentence in the literature." Strip the frame, let the sentence stand. See `references/no-signposting.md` for the deep dive - this is the single biggest tell of AI-drafted text in his voice.
-
-The unifying principle behind 10-14: the sentence has to do its own
-work. Don't make the reader supply suspense, assemble emphasis, recall
-a reference, or already know a framework. All four are gesturing at a
-thing instead of saying it.
-
-## Gender-neutral language
-
-- They/them pronouns unless quoting a named individual.
-- Unisex names in scenarios: Alex, Chris, Jerry, Sam, Pat.
-- No gendered defaults for technical roles.
-
-## Quick self-edit checklist
-
-Before handing draft back:
-
-- [ ] Zero em-dashes (`—`). All dashes are ` - ` (space-hyphen-space).
-- [ ] Straight quotes only (`"` `'`), no smart/curly quotes.
-- [ ] Italics use `_underscore_`, not `*single-asterisk*`.
-- [ ] No `**bold**` for emphasis in prose. Plain or italics.
-- [ ] No bold on URLs (auto-linkers capture the asterisks).
-- [ ] No "delve", "landscape", "tapestry", "robust", "nuanced", "leverage" (verb), "ecosystem" (metaphor).
-- [ ] No signposting frames ("What's striking is...", "The thing that matters here...").
-- [ ] No record-scratch fragments staging the next paragraph.
-- [ ] Opens with observation, not thesis.
-- [ ] Closes with a thought, not a summary.
-- [ ] If a quote does heavy lifting, no sentence announces that it does.
+Look at `styles/cote/general.md` for a prose style and
+`styles/tyler-cowen-questions.md` for a question style as examples -
+not rigid templates, just working references. Point at existing
+`references/*.md` files where they apply, or ship your own alongside
+the style.
