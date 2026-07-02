@@ -259,8 +259,8 @@ Before handing the edit back:
 ## Source notes
 
 - Azuka Onwuka, *50 LinkedIn clichés to avoid in 2026 to sound
-  original* (LinkedIn Pulse). Retrieved 2026-07-02. Categories I-VI
-  above follow his structure.
-- Ethan Mollick, LinkedIn post on AI-prompted phrase tells (Nov
-  2025). The "Mollick's short-mute list" section is verbatim from his
-  post.
+  original* (LinkedIn Pulse). https://www.linkedin.com/pulse/50-linkedin-clich%C3%A9s-avoid-2026-sound-original-azuka-onwuka-5ytwe/
+  Retrieved 2026-07-02. Categories I-VI above follow his structure.
+- Ethan Mollick, LinkedIn post on AI-prompted phrase tells. https://www.linkedin.com/posts/emollick_linkedin-should-let-us-all-mute-the-following-activity-7437596263673495552-YPkt/
+  Retrieved 2026-07-02. The "Mollick's short-mute list" section is
+  verbatim from his post.
