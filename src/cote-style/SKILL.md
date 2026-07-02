@@ -95,6 +95,7 @@ across authors, not tied to any one voice:
 
 - `references/formatting.md` - dashes, quotes, italics, `<figure>` HTML, URL hygiene. Load on any drafting task.
 - `references/no-signposting.md` - biggest AI-writing tic (framing sentences that announce what's coming instead of just saying it). Load on any edit over AI-drafted text.
+- `references/ai-writing-tells.md` - broader catalog of AI-writing patterns and how to strip them, derived from the Wikipedia *Signs of AI writing* project page. Load alongside `no-signposting.md` on edit passes. Has a freshness rule - check the file's *Last fetched* date and prompt the user to refresh if it's 90+ days old.
 
 Style-specific deep dives (registers, per-content-type conventions,
 per-style anti-patterns) live *inside* that style's dir, not here. See
