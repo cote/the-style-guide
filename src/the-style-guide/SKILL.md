@@ -1,12 +1,13 @@
 ---
-name: cote-style
+name: the-style-guide
 description: A multi-style guide for writing and question-asking. Primarily for writing in the style of Michael Coté (likely the user of this skill), but designed to hold other styles too - other authors' prose voices, question-asking styles for interview prep (e.g. Tyler Cowen), or any repeatable "here's how to sound like X" bundle. Use when drafting, ghostwriting, or editing anything that should sound like a specific voice - blogs, newsletters, social media, video descriptions, conference abstracts, white papers, podcast show notes, talk titles, email replies - or when generating questions / interview outlines / prompts in someone's characteristic style.
+compatibility: Requires bash.
 metadata:
   author: cote
-  version: "1.2"
+  version: "1.3"
 ---
 
-# cote-style
+# The Style Guide
 
 A portable multi-style guide. Ships with the Coté prose style as the
 default. Also holds question-generation styles (e.g. Tyler Cowen
@@ -107,9 +108,9 @@ per-style anti-patterns) live *inside* that style's dir, not here. See
 Before doing the task, look for user customizations in this resolution
 order:
 
-1. `$COTE_STYLE_CONFIG_DIR` (if set)
-2. `$XDG_CONFIG_HOME/io.cote.ai.skill.cote_style/` (if `XDG_CONFIG_HOME` is set)
-3. `~/.config/io.cote.ai.skill.cote_style/`
+1. `$THE_STYLE_GUIDE_CONFIG_DIR` (if set)
+2. `$XDG_CONFIG_HOME/io.cote.ai.skill.the_style_guide/` (if `XDG_CONFIG_HOME` is set)
+3. `~/.config/io.cote.ai.skill.the_style_guide/`
 
 Inside whichever resolves first, treat these as load-bearing:
 
@@ -136,10 +137,10 @@ ask.
 
 | What | Location |
 |------|----------|
-| Config | `~/.config/io.cote.ai.skill.cote_style/` |
-| Data | `~/.local/share/io.cote.ai.skill.cote_style/` |
-| State | `~/.local/state/io.cote.ai.skill.cote_style/` |
-| Cache | `~/.cache/io.cote.ai.skill.cote_style/` |
+| Config | `~/.config/io.cote.ai.skill.the_style_guide/` |
+| Data | `~/.local/share/io.cote.ai.skill.the_style_guide/` |
+| State | `~/.local/state/io.cote.ai.skill.the_style_guide/` |
+| Cache | `~/.cache/io.cote.ai.skill.the_style_guide/` |
 
 Config is load-bearing - see "Local customizations" above. Data,
 state, and cache are reserved for future use (e.g. a per-user history

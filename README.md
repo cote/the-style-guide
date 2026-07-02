@@ -1,4 +1,4 @@
-# cote-style
+# The Style Guide
 
 A portable Claude skill that holds multiple named writing / style
 guides in one place. Drop it into any AI session that needs to draft,
@@ -46,7 +46,7 @@ Shared references (style-agnostic, loaded as-needed):
 ## Layout
 
 ```
-src/cote-style/
+src/the-style-guide/
   SKILL.md                            # always-load: skill purpose, resolution order, XDG paths
   styles/
     cote/                             # multi-file style: general.md + register siblings
@@ -67,10 +67,16 @@ src/cote-style/
 
 ## How to use it
 
-Drop `src/cote-style/` into your Claude (or other AI) skills directory
-as `cote-style/`. Then either:
+Fastest path: clone the repo and run `./build.sh --install`. That
+copies `src/the-style-guide/` into `~/.claude/skills/the-style-guide/`
+so Claude Code picks it up. Set `SKILL_INSTALL_DIR` to install
+somewhere else.
 
-- Reference it in a session: "use the cote-style skill for this draft."
+If you'd rather do it by hand, drop `src/the-style-guide/` into your
+Claude (or other AI) skills directory as `the-style-guide/`. Then
+either:
+
+- Reference it in a session: "use the-style-guide skill for this draft."
 - Or paste `SKILL.md` into the system prompt / context for one-off use.
 
 Progressive disclosure: `SKILL.md` is always loaded. Individual style
@@ -88,8 +94,8 @@ rather than silently falling back.
 ## Customizing without forking
 
 Follows the XDG config convention. Drop your own files into
-`~/.config/io.cote.ai.skill.cote_style/` (or set
-`$COTE_STYLE_CONFIG_DIR` to point elsewhere) to layer on top of the
+`~/.config/io.cote.ai.skill.the_style_guide/` (or set
+`$THE_STYLE_GUIDE_CONFIG_DIR` to point elsewhere) to layer on top of the
 shipped defaults:
 
 - `SKILL.local.md` - standing rules applied to every task. Useful if

@@ -1,0 +1,23 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:b0229b94-6436-40e8-9657-2fac7b322bad",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-02T10:28:00Z",
+    "tools": [
+      { "vendor": "the-skill-builder", "name": "build.sh", "version": "1.0" }
+    ],
+    "component": {
+      "type": "application",
+      "bom-ref": "pkg:generic/the-style-guide@1.3",
+      "name": "the-style-guide",
+      "version": "1.3",
+      "description": "A portable multi-style guide for writing and question-asking, holding named voices (Coté prose, Tyler Cowen questions, LinkedIn) and shared references.",
+      "licenses": [ { "license": { "id": "CC0-1.0" } } ],
+      "authors": [ { "name": "Coté" } ],
+      "hashes": [ { "alg": "SHA-256", "content": "d819157dc7004871110470705e411a84d190e0f4f79880da0b0f060b76a575e0" } ]
+    }
+  },
+  "components": []
+}
