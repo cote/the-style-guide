@@ -22,13 +22,13 @@ feed.
 
 ### Mastodon (one sentence + URL)
 
-> My pals @dashaun and David Zendzian go over how AI has improved how you can handle security issues, for app developers: https://www.youtube.com/watch?v=5kXNx9aj0c0
+> My pals @cohost-a and Co-host B go over how AI has improved how you can handle security issues, for app developers: https://www.youtube.com/watch?v=EXAMPLE
 
 Pattern: one warm sentence naming the guests/topic + bare URL. No hashtags. No quoted SRT lines. Positive framing ("AI has improved...") beats doomer framing ("the math just broke").
 
 ### Bluesky (same shape, Bluesky handles)
 
-> My pals @dashaun.com and @dmz006.bsky.social go over how AI has improved how you can handle security issues, for app developers: https://www.youtube.com/watch?v=...
+> My pals @cohost-a.example.com and @cohost-b.bsky.social go over how AI has improved how you can handle security issues, for app developers: https://www.youtube.com/watch?v=EXAMPLE
 
 Same structure as Mastodon. Use platform-native handles.
 
@@ -40,7 +40,7 @@ observation, not a call to action.
 
 Voice markers:
 
-- "My pals @X and Y..."
+- "My pals @[handle] and [name]..."
 - "I've been circling a theme this week..."
 - Self-deprecating asides.
 - One emoji at most, and only if it's earning its keep (👉 pointing at a link is fine; sparkles ✨ are not).
@@ -69,8 +69,8 @@ for, not Coté personally). The voice changes entirely.
 Rules:
 
 - **Third person throughout.** No "I", no "my pals", no "I think".
-- **Full names, no @handles in the body.** "Michael Coté, David Zendzian, and Dan Vega discuss..." not "@thecote and @dashaun..."
-- **Open with a speaker-attributed quote** if there is one: `"Code is cheap, software is not," Dan Vega on last week's [show name].`
+- **Full names, no @handles in the body.** "Michael Coté, Co-host A, and Co-host B discuss..." not "@thecote and @cohost-a..."
+- **Open with a speaker-attributed quote** if there is one: `"Code is cheap, software is not," Co-host A on last week's [show name].`
 - **Body is a plain recap of the angle**, not a personal reaction. No "anyone who's spent any real time with X" or other personal-voice moves.
 - **Capitalize words for emphasis** where natural: "everything BUT coding when it comes to AI generated software".
 - **Hashtag set is broader and longer** than personal posts. 8-10 hashtags is fine. Casing can be inconsistent across the set - don't force CamelCase across the board.
