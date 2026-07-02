@@ -155,6 +155,30 @@ contested, dropping the warning label reveals that.
 - "Soft skills are the new hard skills."
 - "This is your sign."
 
+### Self-important punchline closers
+
+Sentences at the end of a piece whose job is to elevate the story
+being told - a vague-profound frame that says "and this one, right
+here, is the one that matters" without saying what makes it matter.
+Same move as the italicized lesson line but done as prose so it slips
+past the eye.
+
+- "It's the one worth telling."
+- "That's the story worth telling."
+- "It's the version that matters."
+- "That's the moment worth remembering."
+- "That's the part I keep coming back to."
+- "That's the one that stayed with me."
+- "It's the only [X] that matters."
+- "That's the real lesson."
+- "That's what I'll remember."
+
+**Fix:** If the story is worth telling, telling it is the argument -
+you don't get to also *tell the reader it's worth telling*. Cut the
+closer. If something specific about *why* it stuck is load-bearing,
+say that specific thing instead ("I've thought about the pause before
+she answered maybe fifty times since"), not the meta-claim.
+
 ### Additional openers documented in the literature
 
 The first opener below is used as the *taxonomic example* of a
@@ -295,6 +319,9 @@ Before handing the edit back:
       engagement closer). At most two of those parts.
 - [ ] No italicized single-line "lesson" bumper-sticker.
 - [ ] No engagement-baiting closer. Close on a real thought.
+- [ ] No self-important punchline closer ("it's the one worth telling,"
+      "that's the version that matters," etc.). If the story earned
+      it, don't announce that it did.
 - [ ] No checkmark / sparkle / arrow / fire emoji bullets.
 - [ ] Every abstract claim replaced with (a) specific situation,
       (b) specific decision, (c) specific result - or cut.

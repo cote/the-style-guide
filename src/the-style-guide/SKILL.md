@@ -4,7 +4,7 @@ description: A multi-style guide for writing and question-asking. Primarily for 
 compatibility: Requires bash.
 metadata:
   author: cote
-  version: "1.3"
+  version: "1.4"
 ---
 
 # The Style Guide
