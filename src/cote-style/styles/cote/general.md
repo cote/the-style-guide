@@ -5,15 +5,16 @@ anti-patterns, and formatting rules that apply to every piece of
 writing in his voice regardless of content type.
 
 Load this whenever the user's request maps to the Coté style. Then
-also load the matching content-type file:
+also load the matching register file (all live alongside this one
+under `styles/cote/`):
 
-- `blog.md` - long-form blog posts on his personal site.
-- `newsletter.md` - "Related to your interests" newsletter issues.
-- `social-post.md` - LinkedIn, Mastodon, Bluesky, Twitter, video descriptions.
-- `professional.md` - white papers, analyst briefs, conference abstracts, vendor-published articles.
-- `deadpan-list.md` - catalogue-of-the-absurd pieces where the topic itself is the joke.
+- `casual-voice.md` - long-form blog posts, newsletter prose, personal social, podcast show notes. The default register.
+- `professional-voice.md` - white papers, analyst briefs, conference abstracts, vendor-published articles. Same voice, two notches more buttoned-up.
+- `deadpan-list-essay.md` - catalogue-of-the-absurd pieces where the topic itself is the joke.
+- `social-media.md` - LinkedIn, Mastodon, Bluesky, video descriptions; personal vs company-page split.
 
-Also load these shared references as-needed:
+Also load these shared references as-needed (they live under
+`references/`, not this style dir - they're style-agnostic):
 
 - `../../references/formatting.md` - dashes, quotes, italics, `<figure>` HTML, URL hygiene. Load on any drafting task.
 - `../../references/no-signposting.md` - the biggest single AI-writing tic to strip. Load on any edit pass over AI-drafted text.
@@ -102,7 +103,7 @@ observational, not jokey - more raised eyebrow than punchline.
 11. **Staccato fragment drumroll.** Multiple sentence fragments chained together to perform emphasis. "Sixty people. $7.5 million a year. Every year." Fold them back into a single sentence with commas. The number still lands.
 12. **Bare-name historical drop.** "Ricardo had this in 1817." "Aristotle knew." Performing erudition. Fold the attribution into a sentence that actually says what the idea is.
 13. **Speaking inside a framework's vocabulary.** Don't assume the reader is already inside Wardley maps / DDD / Jevons. State the principle in plain terms, name the framework as a pointer for readers who want to go deeper.
-14. **Signposting / meta-talk.** "What's striking about X is..." / "The thing that matters here is..." / "is the most honest sentence in the literature." Strip the frame, let the sentence stand. See `../../references/no-signposting.md` for the deep dive.
+14. **Signposting / meta-talk.** "What's striking about X is..." / "The thing that matters here is..." / "is the most honest sentence in the literature." Strip the frame, let the sentence stand. See `../../references/no-signposting.md` for the deep dive - the single biggest tell of AI-drafted text in his voice.
 
 The unifying principle behind 10-14: the sentence has to do its own
 work. Don't make the reader supply suspense, assemble emphasis, recall

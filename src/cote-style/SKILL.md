@@ -88,15 +88,17 @@ dir (see below) to extend this.
 
 ## Shared references
 
-Deep-dive docs that styles point at as-needed. Not trigger-matched;
-loaded when a style calls for them or the task warrants it:
+Deep-dive docs that any style can point at. Not trigger-matched;
+loaded when the picked style calls for them or the task warrants it.
+These are style-agnostic - taste rules and edit-pass tools that apply
+across authors, not tied to any one voice:
 
 - `references/formatting.md` - dashes, quotes, italics, `<figure>` HTML, URL hygiene. Load on any drafting task.
-- `references/casual-voice.md` - conversational register deep dive (Coté-flavored).
-- `references/professional-voice.md` - white paper / brief / abstract register.
-- `references/deadpan-list-essay.md` - catalogue-of-the-absurd mode.
-- `references/social-media.md` - platform-by-platform short-form voice.
-- `references/no-signposting.md` - biggest AI-writing tic to strip on edit passes. Load on any edit over AI-drafted text.
+- `references/no-signposting.md` - biggest AI-writing tic (framing sentences that announce what's coming instead of just saying it). Load on any edit over AI-drafted text.
+
+Style-specific deep dives (registers, per-content-type conventions,
+per-style anti-patterns) live *inside* that style's dir, not here. See
+`styles/cote/` for examples.
 
 ## Local customizations
 

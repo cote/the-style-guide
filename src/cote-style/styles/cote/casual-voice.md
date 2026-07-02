@@ -49,13 +49,13 @@ to shift from description to opinion:
 
 ### "My read of this kind of thing is..."
 
-Signature opener for stating a take. Substitute when the rhythm fits:
+Do not over do this, but something begin with an observation rather than a thesis statement:
 
 - "My read of this kind of thing is..."
 - "I've been circling a theme this week..."
 - "I've been thinking about X..."
 
-These are all observation-first openers. Avoid thesis-first openers.
+These are all observation-first openers.
 
 ### Start paragraphs with "Still" or "But"
 
@@ -77,6 +77,8 @@ rather than "no one". The hedge here is precision, not cowardice.
 ## Vocabulary
 
 ### Use freely
+
+These are examples, not exhastive lists:
 
 - Casual register: "shit", "stuff", "fucked up", "hot hell water".
 - Enterprise jargon when precise: "lift-and-shift", "refactoring", "cloud-native", "platform-as-a-product", "service mesh", "small-batch".
@@ -126,6 +128,7 @@ Don't strip these on edit - they're how Coté actually talks:
 - "Maybe X" / "Maybe that's what's happening, I don't know."
 - "I think you still need humans to do Z."
 - "This feels like where most of it lands. Maybe?"
+- Frequent use of, like, "like" and kind of going overboard with "sort of"...and simialar wording.
 
 The distinction: speculative hedging *about what is happening or why* is
 voice. Analytical hedging *to dodge a position you actually hold* is
