@@ -82,6 +82,7 @@ content type. Pick single-file when it doesn't.
 
 - **`styles/cote/`** - Michael Coté's prose voice across his registers. Default for prose writing / editing tasks when nothing else matches. Load `general.md` first, then the content-type sibling that matches the task.
 - **`styles/tyler-cowen-questions.md`** - How to generate interview / conversation questions in the style of Tyler Cowen's *Conversations with Tyler* podcast. Load when the user asks for "Tyler Cowen style questions", interview prep in that style, or podcast question generation with wide-ranging / personal / unexpected angles.
+- **`styles/no-linkedin-talk.md`** - A *negative* / edit-pass style. Load when the user asks to strip LinkedIn cliches from a draft ("don't sound like LinkedIn", "remove LinkedIn-talk", "de-LinkedIn this"). Produces no voice on its own - pair with the actual positive style in play. Catalogs the standard LinkedIn phrase set, the AI-prompted subset, structural tells (dramatic-opener + narrative + lesson + engagement closer), and gives before/after rewrites.
 
 Drop additional `.md` files or subdirectories into the local `styles/`
 dir (see below) to extend this.
