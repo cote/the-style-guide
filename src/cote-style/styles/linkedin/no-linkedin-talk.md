@@ -155,6 +155,49 @@ contested, dropping the warning label reveals that.
 - "Soft skills are the new hard skills."
 - "This is your sign."
 
+### Additional openers documented in the literature
+
+The first opener below is used as the *taxonomic example* of a
+career-announcement post in Usera, Cox & Walker (2026) - when
+academics quote your sentence as a category label, the sentence
+is dead.
+
+- "I'm happy to share that I'm starting a new position at..."
+- "Thrilled to announce..."
+- "Humbled and honored..." (you are neither - you are pleased and proud; say that or say nothing)
+- "A recruiter once told me..." / "An Uber driver once said..." / "A homeless man taught me..." - the stranger-delivering-wisdom trope.
+
+### Additional structural moves to strip
+
+- **Broetry.** One-sentence paragraphs. Stacked for fake gravitas. Like this. Line breaks are punctuation, not percussion.
+- **The parable-to-lesson pivot.** Mundane or invented anecdote → "and that's when I realized [business lesson]." The single most-mocked genre on r/LinkedInLunatics (~700k subscribers exist to make fun of it).
+- **The humble-brag disclosure.** Vulnerability deployed as a credential ("I cried in my car, then closed the deal").
+- **The fake dialogue.** "My 6-year-old asked me what I do for work. What I told her changed how I think about leadership."
+
+### Extended banned lexicon
+
+Beyond the vocabulary tells in the sections above, these phrases and
+words are LinkedIn-specific and should not appear in drafts meant to
+escape the register:
+
+- "journey" (except literal travel)
+- "passionate"
+- "thrilled"
+- "humbled"
+- "blessed"
+- "game-changer"
+- "disruptor"
+- "thought leader" (about yourself)
+- "synergy"
+- "circle back"
+- "deep dive" (as a noun)
+- "leverage" (as a verb)
+- "rockstar", "ninja", "guru" (about people)
+- "in today's fast-paced world"
+- "now more than ever"
+- "value-add"
+- "learnings"
+
 ### AI-prompted LinkedIn tells (Mollick's short-mute list)
 
 These are the phrases that mark a post as poorly-prompted AI, not
@@ -264,3 +307,14 @@ Before handing the edit back:
 - Ethan Mollick, LinkedIn post on AI-prompted phrase tells. https://www.linkedin.com/posts/emollick_linkedin-should-let-us-all-mute-the-following-activity-7437596263673495552-YPkt/
   Retrieved 2026-07-02. The "Mollick's short-mute list" section is
   verbatim from his post.
+- Usera, D., Cox, S., & Walker, L. (2026). *What users post and
+  engage with on LinkedIn: A mixed methods study.* SAGE Open.
+  https://doi.org/10.1177/21582440261428891 -
+  Retrieved 2026-07-02. Cited in the "Additional openers documented
+  in the literature" and "Additional structural moves" sections;
+  observation that the paper uses "I'm happy to share that I'm
+  starting a new position" as a taxonomic exemplar of career-update
+  posts. Paper also confirms r/LinkedInLunatics as an active
+  mocking-community and speculates that clichéd Expertise posts are
+  judged more harshly - cliché as engagement risk, not just taste
+  crime.
