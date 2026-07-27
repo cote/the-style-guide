@@ -4,7 +4,7 @@ description: A multi-style guide for writing and question-asking. Primarily for 
 compatibility: Requires bash.
 metadata:
   author: cote
-  version: "1.4"
+  version: "1.5"
 ---
 
 # The Style Guide
@@ -81,6 +81,7 @@ content type. Pick single-file when it doesn't.
 
 - **`styles/cote/`** - Michael Coté's prose voice across his registers. Default for prose writing / editing tasks when nothing else matches. Load `general.md` first, then the content-type sibling that matches the task.
 - **`styles/tyler-cowen-questions.md`** - How to generate interview / conversation questions in the style of Tyler Cowen's *Conversations with Tyler* podcast. Load when the user asks for "Tyler Cowen style questions", interview prep in that style, or podcast question generation with wide-ranging / personal / unexpected angles.
+- **`styles/ai-detector.md`** - A generic, voice-neutral detection + edit-pass style. Load when the user asks to "detect AI", "strip AI", "de-AI this", "make it not read like ChatGPT", or as a companion pass at the end of any generation task. Produces no voice on its own - pair with the actual positive style in play. Aggregates the anti-AI content that's scattered across the other shipped styles (never-use word lists, Mollick's short-mute list, self-important punchline closers, signposting frames, rationalist / LessWrong jargon) into one includable file. Cites the empirical evidence base (Kobak, Liang, Gray, Glynn, Cabanac) and the editorial essays (Gorrie, Vollmer, Hassid). Point at `references/ai-writing-tells.md` for the deeper Wikipedia-derived catalog. Pair with `scripts/cliche-check.py` for the automated scan.
 - **`styles/linkedin/`** - LinkedIn-focused styles. Two peer files, load whichever the user asks for (this dir has no `general.md` - the two files are separate top-level styles that happen to share a subject):
   - **`no-linkedin-talk.md`** - A *negative* / edit-pass style. Load when the user asks to strip LinkedIn cliches from a draft ("don't sound like LinkedIn", "remove LinkedIn-talk", "de-LinkedIn this"). Produces no voice on its own - pair with the actual positive style in play. Catalogs the standard LinkedIn phrase set, the AI-prompted subset, structural tells (dramatic-opener + narrative + lesson + engagement closer), the extended banned lexicon (journey / thrilled / humbled / disruptor / etc.), broetry, the parable-to-lesson pivot, and gives before/after rewrites.
   - **`successful-posts.md`** - A positive / how-to style. Load when the user wants a LinkedIn post that will actually perform ("write me a LinkedIn post about X", "help me get engagement on this"). Grounded in Usera / Cox / Walker (2026) engagement research: the post-category hierarchy (Interpersonal + Observances win reactions/comments; Business + Observances win reposts; Expertise underperforms), the scarcity arbitrage, tagging mechanics, and per-post-type recipes (interpersonal / observance / business / personal / expertise). Deliberately ignores whether the post "sounds like LinkedIn" - pair with `no-linkedin-talk.md` if the user wants effective *and* not-embarrassing.
@@ -98,6 +99,8 @@ across authors, not tied to any one voice:
 - `references/formatting.md` - dashes, quotes, italics, `<figure>` HTML, URL hygiene. Load on any drafting task.
 - `references/no-signposting.md` - biggest AI-writing tic (framing sentences that announce what's coming instead of just saying it). Load on any edit over AI-drafted text.
 - `references/ai-writing-tells.md` - broader catalog of AI-writing patterns and how to strip them, derived from the Wikipedia *Signs of AI writing* project page. Load alongside `no-signposting.md` on edit passes. Has a freshness rule - check the file's *Last fetched* date and prompt the user to refresh if it's 90+ days old.
+- `references/dont-talk-like-an-ai.md` - the anti-AI rules packaged as a self-contained document meant to be pasted into someone else's system prompt, `CLAUDE.md`, or custom-instructions box. Load when the user asks for anti-AI rules they can take somewhere else ("give me something I can paste into ChatGPT", "write me a system prompt that stops this"), rather than asking for a draft to be edited. Covers ground the other files don't: the ban on one-sentence paragraphs and fragments-as-drama, sentence-length variation, and when a bulleted list is the wrong shape. For an actual edit pass over a draft, use `styles/ai-detector.md` instead.
+- `references/dont-talk-like-an-ai-short.md` - the ~380-word version of the same, sized for a user-preferences box where it competes with everything else the user wants the model to know. Load when the user asks for a short version, or when the target is a preferences / personalization field rather than a full system prompt.
 
 Style-specific deep dives (registers, per-content-type conventions,
 per-style anti-patterns) live *inside* that style's dir, not here. See

@@ -41,7 +41,12 @@
   lists. Originals of the sources live outside the skill (Coté's
   iCloud archive); the skill ships URLs only.
 - `SKILL.md`: added `styles/ai-detector.md` to the Shipped styles
-  catalog.
+  catalog, and both `dont-talk-like-an-ai` files to the Shared
+  references catalog with load conditions that distinguish "give me
+  rules to take elsewhere" from "edit this draft."
+- `README.md`: new "Two files you can use without the skill" section,
+  plus layout-tree entries for `styles/ai-detector.md`, `scripts/`,
+  and the two new references.
 
 ## 1.4 - 2026-07-02
 

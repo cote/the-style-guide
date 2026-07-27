@@ -92,9 +92,9 @@ if $PACKAGE; then
     ],
     "component": {
       "type": "application",
-      "bom-ref": "pkg:generic/$SKILL_NAME@1.4",
+      "bom-ref": "pkg:generic/$SKILL_NAME@1.5",
       "name": "$SKILL_NAME",
-      "version": "1.4",
+      "version": "1.5",
       "description": "A portable multi-style guide for writing and question-asking, holding named voices (Coté prose, Tyler Cowen questions, LinkedIn) and shared references.",
       "licenses": [ { "license": { "id": "CC0-1.0" } } ],
       "authors": [ { "name": "Coté" } ],
