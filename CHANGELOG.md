@@ -1,5 +1,48 @@
 # Changelog
 
+## 1.5 - 2026-07-27
+
+- New `references/dont-talk-like-an-ai.md`: a standalone, self-contained
+  version of the anti-AI rules, written to be pasted straight into a
+  system prompt, a CLAUDE.md, or a custom-instructions box by someone
+  who isn't using this skill at all. Sections: banned phrases grouped by
+  failure mode (importance-by-metaphor, fake-insight setups,
+  signposting, punchline closers, significance inflation, rationalist
+  tics, chat pleasantries, weasel attribution), banned words, nine
+  banned sentence structures, paragraph and document shape, punctuation
+  and formatting, positive rules, final-pass checklist. Adds material
+  the shipped styles don't cover: the ban on one-sentence paragraphs
+  and fragments-as-drama, sentence-length variation, and the rule
+  against bulleting an argument.
+- New `references/dont-talk-like-an-ai-short.md`: a ~380-word version
+  of the same, sized for a user-preferences box (Claude.ai custom
+  instructions, ChatGPT personalization, a short system prompt). Opens
+  with a scope line stating the rules govern every reply rather than
+  only pieces the user asked to have written, since models otherwise
+  read prose-craft rules as document-only.
+- New `styles/ai-detector.md`: generic voice-neutral detection +
+  edit-pass style. Aggregates the anti-AI content that lives in
+  `styles/cote/general.md`, `styles/cote/professional-voice.md`, and
+  `styles/linkedin/no-linkedin-talk.md` into one includable file.
+  Adds a rationalist / LessWrong jargon section (load-bearing, priors
+  family, steelman, Chesterton's fence). Includes a §Sources block
+  with URLs for the empirical evidence base (Kobak 2025 Science
+  Advances, Liang 2024 ICML, Gray, Glynn, Geng & Trotta, Cabanac) and
+  editorial essays (Gorrie, Vollmer, Hassid). Pair with any positive
+  style; produces no voice on its own.
+- New `scripts/cliche-check.py`: regex scanner over 167 patterns
+  across 9 categories (vocabulary, mollick, punchline-closer,
+  rationalist-hard, rationalist-sparingly, signposting,
+  linkedin-opener, academ-ai-leaks, and Simon Willison's 12
+  llm-cliche-highlighter regexes ported from JS). Reads stdin or a
+  file arg; exits 0 clean, 1 on hits; `--category` filters,
+  `--list-categories` inventories. Vocabulary list draws on the
+  cross-source consensus in the Kobak / Liang / Gray / Vollmer word
+  lists. Originals of the sources live outside the skill (Coté's
+  iCloud archive); the skill ships URLs only.
+- `SKILL.md`: added `styles/ai-detector.md` to the Shipped styles
+  catalog.
+
 ## 1.4 - 2026-07-02
 
 - `styles/linkedin/no-linkedin-talk.md`: added a "Self-important

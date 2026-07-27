@@ -42,6 +42,41 @@ Shared references (style-agnostic, loaded as-needed):
 - *ai-writing-tells* - broader catalog derived from Wikipedia's
   *Signs of AI writing* project page. Has a 90-day freshness rule -
   if the file's *Last fetched* date is stale, prompt for a refresh.
+- *dont-talk-like-an-ai* and *dont-talk-like-an-ai-short* - the
+  anti-AI rules packaged to work with no skill at all. See the next
+  section.
+
+## Two files you can use without the skill
+
+`references/dont-talk-like-an-ai.md` and
+`references/dont-talk-like-an-ai-short.md` are written to be lifted out
+of this repo and used on their own. They're self-contained: no
+cross-references to other files here, no skill-loading machinery, no
+assumption that anything else got read first. Copy either one into a
+chat session, a system prompt, a `CLAUDE.md`, a `.cursorrules`, or the
+custom-instructions box of whatever assistant you use, and it works.
+
+The long one runs about 200 lines and covers banned phrases grouped by
+failure mode, banned words, nine banned sentence structures, paragraph
+and document shape, punctuation, and a final-pass checklist. Use it
+when you're setting up a drafting or editing context and have room for
+it, or paste it into a single session when you want one piece cleaned
+up.
+
+The short one is about 380 words, sized for a user-preferences box
+where you're competing with everything else you want the model to know
+about you. It keeps the highest-frequency bans and the structural rules
+that change how a reply reads, and drops the explanations. It opens
+with a line scoping the rules to every reply rather than only to
+documents you explicitly asked to have written, which is the difference
+between a model that stops saying "load-bearing" in chat and one that
+only stops when it thinks it's Writing.
+
+Both are CC0 like the rest of the repo, so no attribution needed. If
+you do want the full skill, these two files are also loaded as
+references inside it, and `styles/ai-detector.md` plus
+`scripts/cliche-check.py` give you the same material with the sources
+and an automated scanner.
 
 ## Layout
 
@@ -56,6 +91,7 @@ src/the-style-guide/
       deadpan-list-essay.md
       social-media.md
     tyler-cowen-questions.md          # single-file style
+    ai-detector.md                    # single-file style, voice-neutral edit pass
     linkedin/                         # two peer styles that share a subject
       no-linkedin-talk.md
       successful-posts.md
@@ -63,6 +99,10 @@ src/the-style-guide/
     formatting.md
     no-signposting.md
     ai-writing-tells.md
+    dont-talk-like-an-ai.md           # standalone, paste anywhere
+    dont-talk-like-an-ai-short.md     # standalone, sized for a prefs box
+  scripts/
+    cliche-check.py                   # regex scanner for the phrase lists
 ```
 
 ## How to use it
