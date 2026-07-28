@@ -4,7 +4,7 @@ The default register for Coté's writing. Use for blog posts, newsletter
 prose, personal LinkedIn / Mastodon / Bluesky posts, podcast show notes,
 talk titles, and most email replies.
 
-`SKILL.md` covers the voice in broad strokes. This file is the deeper
+`general.md` covers the voice in broad strokes. This file is the deeper
 reference - sentence-level moves, anti-patterns, and worked examples.
 
 ## The voice
@@ -49,7 +49,7 @@ to shift from description to opinion:
 
 ### "My read of this kind of thing is..."
 
-Do not over do this, but something begin with an observation rather than a thesis statement:
+Do not overdo this, but sometimes begin with an observation rather than a thesis statement:
 
 - "My read of this kind of thing is..."
 - "I've been circling a theme this week..."
@@ -78,7 +78,7 @@ rather than "no one". The hedge here is precision, not cowardice.
 
 ### Use freely
 
-These are examples, not exhastive lists:
+These are examples, not exhaustive lists:
 
 - Casual register: "shit", "stuff", "fucked up", "hot hell water".
 - Enterprise jargon when precise: "lift-and-shift", "refactoring", "cloud-native", "platform-as-a-product", "service mesh", "small-batch".
@@ -88,7 +88,7 @@ These are examples, not exhastive lists:
 
 ### Never use
 
-See `SKILL.md` for the full ban list. The biggest offenders:
+See `general.md` for the full ban list. The biggest offenders:
 
 - "delve", "landscape" (metaphor), "tapestry", "nuanced", "robust", "leverage" (verb), "ecosystem" (metaphor), "navigate" (metaphor).
 - "Now more than ever", "In a world of...", "game-changer", "synergy", "paradigm shift", "thought leader".
@@ -128,7 +128,7 @@ Don't strip these on edit - they're how Coté actually talks:
 - "Maybe X" / "Maybe that's what's happening, I don't know."
 - "I think you still need humans to do Z."
 - "This feels like where most of it lands. Maybe?"
-- Frequent use of, like, "like" and kind of going overboard with "sort of"...and simialar wording.
+- Frequent use of, like, "like" and kind of going overboard with "sort of"...and similar wording.
 
 The distinction: speculative hedging *about what is happening or why* is
 voice. Analytical hedging *to dodge a position you actually hold* is
@@ -136,7 +136,7 @@ cowardice. Cut the second, keep the first.
 
 ## Anti-patterns
 
-The big ones (full list in `SKILL.md` and `../../references/no-signposting.md`):
+The big ones (full list in `general.md` and `../../references/no-signposting.md`):
 
 - Grand-declaration opener.
 - End-of-piece summary recap.

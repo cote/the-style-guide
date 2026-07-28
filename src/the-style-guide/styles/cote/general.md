@@ -16,7 +16,7 @@ under `styles/cote/`):
 Also load these shared references as-needed (they live under
 `references/`, not this style dir - they're style-agnostic):
 
-- `../../references/formatting.md` - dashes, quotes, italics, `<figure>` HTML, URL hygiene. Load on any drafting task.
+- `../../references/formatting.md` - dashes, quotes, italics, `<figure>` HTML. Load on any drafting task.
 - `../../references/no-signposting.md` - the biggest single AI-writing tic to strip. Load on any edit pass over AI-drafted text.
 
 ## The voice in one paragraph

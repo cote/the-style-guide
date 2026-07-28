@@ -96,7 +96,7 @@ loaded when the picked style calls for them or the task warrants it.
 These are style-agnostic - taste rules and edit-pass tools that apply
 across authors, not tied to any one voice:
 
-- `references/formatting.md` - dashes, quotes, italics, `<figure>` HTML, URL hygiene. Load on any drafting task.
+- `references/formatting.md` - dashes, quotes, italics, `<figure>` HTML. Load on any drafting task.
 - `references/no-signposting.md` - biggest AI-writing tic (framing sentences that announce what's coming instead of just saying it). Load on any edit over AI-drafted text.
 - `references/ai-writing-tells.md` - broader catalog of AI-writing patterns and how to strip them, derived from the Wikipedia *Signs of AI writing* project page. Load alongside `no-signposting.md` on edit passes. Has a freshness rule - check the file's *Last fetched* date and prompt the user to refresh if it's 90+ days old.
 - `references/dont-talk-like-an-ai.md` - the anti-AI rules packaged as a self-contained document meant to be pasted into someone else's system prompt, `CLAUDE.md`, or custom-instructions box. Load when the user asks for anti-AI rules they can take somewhere else ("give me something I can paste into ChatGPT", "write me a system prompt that stops this"), rather than asking for a draft to be edited. Covers ground the other files don't: the ban on one-sentence paragraphs and fragments-as-drama, sentence-length variation, and when a bulleted list is the wrong shape. For an actual edit pass over a draft, use `styles/ai-detector.md` instead.

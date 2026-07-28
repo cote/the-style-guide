@@ -250,8 +250,8 @@ If you see any of these strings in the text, it's not just AI-written
 - Broken wikitext / half-converted markdown / unclosed tags
 - References defined but never called
 - Dead external links
-- URLs with `utm_source=` / `utm_medium=` / `utm_campaign=` (also see
-  `formatting.md` URL hygiene section)
+- URLs with `utm_source=` / `utm_medium=` / `utm_campaign=` left on a
+  pasted link
 
 ## Communication-tone tells (chat / talk-page / email context)
 

@@ -76,11 +76,11 @@ author-narration. The reader doesn't need the live-blog.
 
 **Before:**
 
-> Willis closed with what I think is the most important sentence in the recording, on what made the engagement actually work:
+> One speaker closed with what I think is the most important sentence in the recording, on what made the engagement actually work:
 
 **After:**
 
-> Willis ended on what made the engagement work:
+> One speaker ended on what made the engagement work:
 
 If a quote is doing the heavy lifting, don't tell the reader it's heavy.
 
@@ -156,11 +156,11 @@ with no commentary.
 
 **Before:**
 
-> Chris Willis put the same finding in one sentence: you don't get to production without good relationships. That observation does not look like a recommendation in the conventional sense because it does not generalize cleanly into a procurement clause or a policy document. It is, however, what every successful engagement seems to require, public or private.
+> One practitioner put the same finding in one sentence: you don't get to production without good relationships. That observation does not look like a recommendation in the conventional sense because it does not generalize cleanly into a procurement clause or a policy document. It is, however, what every successful engagement seems to require, public or private.
 
 **After:**
 
-> Chris Willis put the same finding in one sentence: you don't get to production without good relationships. It doesn't generalize cleanly into a procurement clause, but it's what every successful engagement requires.
+> One practitioner put the same finding in one sentence: you don't get to production without good relationships. It doesn't generalize cleanly into a procurement clause, but it's what every successful engagement requires.
 
 ### Even mild forms
 

@@ -31,6 +31,18 @@
 - `references/dont-talk-like-an-ai.md` and
   `references/dont-talk-like-an-ai-short.md`: rule added to both, with
   the "I don't know what a system of design is" before/after.
+- Tidying: dropped the URL-hygiene section from
+  `references/formatting.md` and its pointers in `SKILL.md`,
+  `README.md`, `styles/cote/general.md`,
+  `styles/cote/social-media.md`, and
+  `references/ai-writing-tells.md` - it encoded one person's
+  publishing convention rather than portable style guidance.
+  Genericized the named examples in `references/no-signposting.md`
+  and `styles/linkedin/successful-posts.md`. Fixed typos and stale
+  `SKILL.md` cross-references in `styles/cote/casual-voice.md` (the
+  ban list and voice summary moved to `styles/cote/general.md` in
+  1.2). Refreshed the `dist/` artifacts, which had not been rebuilt
+  since 1.4.
 
 ## 1.5 - 2026-07-27
 

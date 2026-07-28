@@ -10,7 +10,6 @@ registers depending on context:
 ## Universal rules across platforms
 
 - **Never wrap URLs in `**bold**`.** Auto-linkers grab the asterisks and break the link. Bare URLs.
-- **No `?ref=cote.io`** on short-form social. (That convention is for published long-form: blog posts, newsletter, micro.blog posts.) Strip `utm_*` and any foreign `ref=` per standard URL hygiene, but leave it at that.
 - **No em-dashes.** Hyphens with spaces.
 - **Straight quotes only.**
 - **No hashtag spam on personal posts.** Hashtags allowed only on company-page posts where the convention calls for them.
@@ -93,7 +92,7 @@ For Coté's own videos:
 
 - First paragraph: one or two warm sentences framing what the video is about. First person.
 - Then: a chapter list / agenda if the video has segments, formatted as `MM:SS Title`.
-- Then: relevant links (cited articles, related episodes, his blog), bare URLs, no `?ref=cote.io`.
+- Then: relevant links (cited articles, related episodes, his blog), bare URLs.
 - Then: guest credits with their handles for at least one platform.
 
 Don't write a marketing blurb. Write what the video is, who's in it,

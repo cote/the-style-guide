@@ -81,7 +81,7 @@ the metric that serves the actual goal.
 
 ## Engagement playbook
 
-1. **Make someone else the subject.** The single strongest pattern in the data: posts praising, thanking, or acknowledging a specific named person outperform posts about yourself. **[paper]** Specificity is the active ingredient - "Priya rebuilt our CI pipeline over a weekend and cut build times 60%" beats "shoutout to my amazing team." **[editorial]**
+1. **Make someone else the subject.** The single strongest pattern in the data: posts praising, thanking, or acknowledging a specific named person outperform posts about yourself. **[paper]** Specificity is the active ingredient - "Gerry rebuilt our CI pipeline over a weekend and cut build times 60%" beats "shoutout to my amazing team." **[editorial]**
 2. **Tag the people you name.** Mechanical reach boost. **[paper]** Only tag when it's genuinely relevant. **[editorial]**
 3. **Convert self-promotion into other-promotion.** Instead of "I gave a talk at DevNexus", write about the three people whose questions changed how you think about the topic. Same news, higher-performing category. **[editorial]**
 4. **Hang timely posts on observances sparingly and sincerely.** Observance posts overperform **[paper]**, but a hollow "Happy International Women's Day" from someone with no track record on the subject reads as opportunistic. Only post observances you have standing to post. **[editorial]**

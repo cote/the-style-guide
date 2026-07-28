@@ -34,8 +34,7 @@ Shared references (style-agnostic, loaded as-needed):
 
 - *formatting* - dashes (never em-), quotes (never smart), italics
   (`_underscore_`, never `*asterisk*`), never `**bold**` for
-  emphasis, the `<figure>` HTML pattern for uploaded images, URL
-  hygiene.
+  emphasis, the `<figure>` HTML pattern for uploaded images.
 - *no-signposting* - the biggest AI-writing tic to strip on edit
   passes: "What's striking about X is...", "The thing that matters
   here is..." Worked before/after examples.

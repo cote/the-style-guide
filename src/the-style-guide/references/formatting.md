@@ -78,21 +78,6 @@ posts: "(1) X. (2) Y. (3) Z."
 - Inline links on a phrase, not citation sentences. Bad: "As DORA reports in their 2023 survey, X." Good: "[DORA's 2023 survey](url) shows X."
 - Trust the reader. Don't add a sentence explaining why a link is relevant when the link's surrounding phrase already does that work.
 
-## URL hygiene (when publishing long-form)
-
-For outbound URLs in published long-form content (blog posts,
-newsletters, summaries, micro.blog posts):
-
-1. **Strip all `utm_*` query parameters** - `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, anything starting with `utm_`. These are tracking params from where Coté originally found the link.
-2. **Drop any incoming `ref=...` parameter** - if the URL came with someone else's referral tag, remove it.
-3. **Append `?ref=cote.io`** as a courtesy referral. Use `&ref=cote.io` if other query params remain after the strip.
-
-Exceptions:
-
-- **cote.io self-links**: do NOT add `?ref=cote.io` on URLs that are already on cote.io. No self-attribution.
-- **Asset URLs**: image `src`, CSS, JS, font URLs - no rewriting.
-- **Short-form social posts** (LinkedIn, Mastodon, Bluesky, video descriptions): do NOT add `?ref=cote.io`. Strip `utm_*` and foreign `ref=` per the strip rules, but leave it at that.
-
 ## HTML inside markdown
 
 CommonMark passes inline HTML through. For blog and micro.blog posts,
