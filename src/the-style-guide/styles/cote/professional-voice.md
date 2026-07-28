@@ -55,6 +55,7 @@ Shape: bottom-line up front, structured middle, surprising-but-earned close.
 - False scarcity: "Nobody's talking about", "The X no one is discussing."
 - Headline questions (Betteridge's law).
 - Hedging filler: "It could be argued", "Some would say", "Arguably".
+- Sincerity disclaimers: "Honestly", "To be honest", "In all honesty", "Truthfully", "Truth be told", "Frankly", "Candidly", "I'll admit", "Let's be honest". Certifying one sentence as honest makes the rest look sold. Say the thing. (The "Now, I'll admit..." concession that's allowed in the casual register doesn't carry here - drop it entirely in buttoned-up work.)
 - "PE" as shorthand for platform engineering - reads as private equity.
 
 ## Argument style

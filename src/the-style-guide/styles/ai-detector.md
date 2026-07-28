@@ -29,6 +29,7 @@ shipped styles into one includable list. Nothing new is invented here.
 Originals stay in place; this is the shared read.
 
 - `styles/cote/general.md` (never-use word list) → §Vocabulary tells.
+  Its anti-pattern 15 (sincerity disclaimer) → §Sincerity disclaimers.
 - `styles/cote/professional-voice.md` (never-use word list) →
   §Vocabulary tells.
 - `styles/linkedin/no-linkedin-talk.md` (Mollick's short-mute list,
@@ -119,6 +120,39 @@ something specific about why it stuck is load-bearing, say that
 specific thing instead ("I've thought about the pause before she
 answered maybe fifty times since"), not the meta-claim.
 
+### Sincerity disclaimers
+
+A prefix that certifies the sentence as honest before delivering it.
+Models produce these constantly, because they read as warm and
+self-aware, and because a hedge dressed as candor is cheaper than a
+claim.
+
+- "Honestly," / "To be honest," / "If I'm being honest," / "In all honesty," / "TBH"
+- "Truthfully," / "To tell the truth," / "Truth be told," / "The truth is,"
+- "I'll admit," / "I have to admit," / "I must admit," / "Admittedly,"
+- "Frankly," / "To be frank," / "Candidly," / "To be candid,"
+- "I genuinely think" / "I genuinely believe"
+- "Let's be honest," / "Let's be real," / "Real talk," / "Seriously though,"
+- "Not gonna lie," / "I won't lie," / "I'm not going to lie,"
+- "Trust me," / "Believe me," / "The honest answer is"
+
+**Why it fails.** The intent is benevolent - the writer wants this bit
+marked as the real stuff. The effect is the opposite: once one sentence
+wears a candor badge, every sentence without one looks hedged, sold, or
+performed. The reader starts auditing the unmarked sentences instead of
+reading them.
+
+**Fix.** Delete the prefix. "Honestly, I don't know what a system of
+design is" → "I don't know what a system of design is." Nothing is
+lost, because the sentence was already honest. If the prefix was
+actually doing concession work rather than honesty work, keep the
+concession and drop the certification: "I hadn't read the docs" rather
+than "I'll admit, I hadn't read the docs."
+
+Related: §Closer tells and §Signposting are the same failure at the
+other end of the sentence - talk *about* the claim substituting for
+the claim.
+
 ### Rationalist / LessWrong jargon
 
 A distinct AI dialect that comes from the 2010s rationalist blogosphere
@@ -194,10 +228,15 @@ phrase in the lists above.
 
     scripts/cliche-check.py draft.md
     cat draft.md | scripts/cliche-check.py
-    scripts/cliche-check.py --category rationalist-hard draft.md
+    scripts/cliche-check.py --category sincerity-disclaimer draft.md
     scripts/cliche-check.py --list-categories
 
-Exits 0 clean, 1 on hits. Output is grouped by category with a short
+Exits 0 clean, 1 on hits. Two categories are deliberately noisy and
+want a human glance rather than a blind cut: `vocabulary` (a word can
+be the right word) and `sincerity-disclaimer` (the bare adverbs hit
+legitimate uses like "she answered honestly," and in the Coté style
+"Now, I'll admit..." is an allowed form the scanner still flags).
+Output is grouped by category with a short
 context window and line number per hit. When the source phrase lists
 in this file or in the shipped styles change, update the script's
 lists too - they're a mirror, not the source of truth.
@@ -319,6 +358,8 @@ Before handing an edit back:
 - [ ] No phrases from Mollick's short-mute list.
 - [ ] No self-important punchline closer ("it's the one worth
       telling," "that's the version that matters," etc.).
+- [ ] No sincerity disclaimer ("Honestly," "To be honest," "I'll
+      admit," "Frankly," "Truth be told," "Not gonna lie").
 - [ ] No signposting frames ("What's striking is...", "The thing that
       matters here...").
 - [ ] No rationalist-jargon hard bans (load-bearing, my priors,

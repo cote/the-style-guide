@@ -38,6 +38,17 @@ back to", "and that's the point", "the rest is just details". If the
 thing is worth saying, saying it is the argument; don't also announce
 that it was worth saying. Cut the last paragraph of most drafts.
 
+**Sincerity disclaimers.** "honestly", "to be honest", "if I'm being
+honest", "in all honesty", "truthfully", "to tell the truth", "truth be
+told", "the truth is", "I'll admit", "admittedly", "frankly", "to be
+frank", "candidly", "I genuinely think", "let's be honest", "let's be
+real", "not gonna lie", "trust me", "believe me". These certify a
+sentence as honest before delivering it. The intent is friendly, but
+once one sentence wears a candor badge every sentence without one looks
+hedged or sold. Delete the prefix and say the thing: "honestly, I don't
+know what a system of design is" → "I don't know what a system of
+design is." It was already honest.
+
 **Significance inflation.** "marks a pivotal moment", "represents a
 significant shift", "a broader movement toward", "left an indelible
 mark", "cannot be overstated", "in an era where", "in today's
@@ -187,6 +198,7 @@ throat-clearing, and it goes.
 ## 7. Final pass checklist
 
 - [ ] No phrase from section 1, including near-variants.
+- [ ] No sentence prefixed with a claim to be honest.
 - [ ] No word from section 2 without a defensible reason.
 - [ ] No "not X, it's Y", no copula dodge, no default triplet lists.
 - [ ] No one-sentence paragraphs and no fragment-as-drama beats.

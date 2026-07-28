@@ -9,7 +9,7 @@ Patterns come from:
 
 - The literal phrase lists in styles/ai-detector.md (vocabulary tells,
   Mollick's short-mute list, self-important punchline closers,
-  rationalist / LessWrong jargon).
+  sincerity disclaimers, rationalist / LessWrong jargon).
 - Simon Willison's llm-cliche-highlighter regexes:
   https://github.com/simonw/tools/blob/main/llm-cliche-highlighter.html
   (adapted from JS to Python).
@@ -92,6 +92,24 @@ PUNCHLINE_CLOSERS = [
     "that's the one that stayed with me",
     "that's the real lesson",
     "that's what i'll remember",
+]
+
+# Prefixes that certify a sentence as honest before delivering it.
+# The bare adverbs (honestly, frankly, truthfully, candidly) will
+# occasionally hit a legitimate adverbial use - "she answered honestly."
+# That's the intended tradeoff: the disclaimer use is far more common in
+# drafted prose, and a false positive costs one glance.
+SINCERITY_DISCLAIMERS = [
+    "honestly", "to be honest", "if i'm being honest", "if i'm honest",
+    "in all honesty", "tbh", "the honest answer is", "honest truth",
+    "truthfully", "to tell the truth", "truth be told", "the truth is",
+    "i'll admit", "i will admit", "i have to admit", "i must admit",
+    "admittedly", "i'll be honest", "let me be honest",
+    "frankly", "to be frank", "candidly", "to be candid",
+    "i genuinely think", "i genuinely believe", "i genuinely",
+    "let's be honest", "let's be real", "real talk", "seriously though",
+    "not gonna lie", "i won't lie", "i'm not going to lie",
+    "trust me", "believe me",
 ]
 
 RATIONALIST_HARD = [
@@ -197,6 +215,7 @@ def build_patterns() -> list[Pattern]:
         "vocabulary": VOCAB_TELLS,
         "mollick": MOLLICK_SHORT_MUTE,
         "punchline-closer": PUNCHLINE_CLOSERS,
+        "sincerity-disclaimer": SINCERITY_DISCLAIMERS,
         "rationalist-hard": RATIONALIST_HARD,
         "rationalist-sparingly": RATIONALIST_SPARINGLY,
         "signposting": SIGNPOSTING,

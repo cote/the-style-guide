@@ -1,5 +1,37 @@
 # Changelog
 
+## 1.6 - 2026-07-28
+
+- New rule: sincerity disclaimers. Prefixes that certify a sentence as
+  honest before delivering it - "Honestly," "To be honest," "In all
+  honesty," "Truthfully," "To tell the truth," "Truth be told," "I'll
+  admit," "Admittedly," "Frankly," "Candidly," "I genuinely think,"
+  "Let's be honest," "Not gonna lie," "Trust me." Benevolent in intent,
+  corrosive in effect: once one sentence wears a candor badge, every
+  sentence without one looks hedged. Fix is to delete the prefix and say
+  the thing.
+- `styles/cote/general.md`: added to the Never-use list, added as hard
+  anti-pattern 15 with a worked example, extended the "sentence has to
+  do its own work" principle from 10-14 to 10-15, and added a
+  self-edit checklist item. Also documents the one allowed form -
+  "Now, I'll admit I don't know what a system of design is" - where
+  "Now," is conversational turn-taking and "I'll admit" is doing
+  concession work rather than honesty-certification.
+- `styles/cote/professional-voice.md`: same ban in the Never-use list,
+  with no "Now, I'll admit" exception - it doesn't carry in
+  buttoned-up work.
+- `styles/ai-detector.md`: new §Sincerity disclaimers under
+  sentence-pattern tells, cross-referenced to §Closer tells and
+  §Signposting as the same failure at the other end of the sentence.
+  Checklist item added. Noted which scanner categories are
+  deliberately noisy and want a human glance.
+- `scripts/cliche-check.py`: new `sincerity-disclaimer` category, 35
+  patterns. Bare adverbs (honestly, frankly, truthfully, candidly) are
+  included knowing they'll occasionally hit a legitimate adverbial use.
+- `references/dont-talk-like-an-ai.md` and
+  `references/dont-talk-like-an-ai-short.md`: rule added to both, with
+  the "I don't know what a system of design is" before/after.
+
 ## 1.5 - 2026-07-27
 
 - New `references/dont-talk-like-an-ai.md`: a standalone, self-contained

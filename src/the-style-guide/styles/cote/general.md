@@ -56,6 +56,7 @@ observational, not jokey - more raised eyebrow than punchline.
 - False scarcity: "Nobody's talking about", "The X no one is discussing." If you're writing about it, people are talking about it.
 - Headline questions (Betteridge's law). Make a statement.
 - Hedging filler: "It could be argued", "Some would say", "Arguably".
+- Sincerity disclaimers: "Honestly", "To be honest", "If I'm being honest", "In all honesty", "Truthfully", "To tell the truth", "Truth be told", "Frankly", "Candidly", "I genuinely", "Not gonna lie", "Let's be honest", "Trust me". See anti-pattern 15 - the sentence is already honest, and saying so casts doubt on every sentence that didn't get the badge.
 - Cheerleading: "exciting", "amazing", "incredible", "groundbreaking", "transformative".
 - "PE" as shorthand for platform engineering. He reads it as private equity.
 
@@ -104,11 +105,21 @@ observational, not jokey - more raised eyebrow than punchline.
 12. **Bare-name historical drop.** "Ricardo had this in 1817." "Aristotle knew." Performing erudition. Fold the attribution into a sentence that actually says what the idea is.
 13. **Speaking inside a framework's vocabulary.** Don't assume the reader is already inside Wardley maps / DDD / Jevons. State the principle in plain terms, name the framework as a pointer for readers who want to go deeper.
 14. **Signposting / meta-talk.** "What's striking about X is..." / "The thing that matters here is..." / "is the most honest sentence in the literature." Strip the frame, let the sentence stand. See `../../references/no-signposting.md` for the deep dive - the single biggest tell of AI-drafted text in his voice.
+15. **Sincerity disclaimer.** A prefix that certifies the sentence as honest before delivering it: "Honestly, I don't know what a system of design is." "To be honest, the demo was bad." "I'll admit, I hadn't read the docs." "Truthfully" / "To tell the truth" / "Truth be told" / "In all honesty" / "If I'm being honest" / "Frankly" / "Candidly" / "I genuinely think" / "Not gonna lie" / "Let's be honest" / "Trust me." The intent is benevolent - the writer wants the reader to know this bit is the real stuff - but the effect is the opposite. Once one sentence gets a candor badge, every sentence without one looks like it was hedged, sold, or performed. **Fix:** delete the prefix and say the thing. "I don't know what a system of design is." That sentence was already honest.
 
-The unifying principle behind 10-14: the sentence has to do its own
+The unifying principle behind 10-15: the sentence has to do its own
 work. Don't make the reader supply suspense, assemble emphasis, recall
-a reference, or already know a framework. All four are gesturing at a
-thing instead of saying it.
+a reference, already know a framework, or take your word for it. All
+five are gesturing at a thing instead of saying it.
+
+### The one allowed form
+
+"Now, I'll admit I don't know what a system of design is." The "Now,"
+opener is conversational turn-taking - the sound of someone shifting
+their weight before conceding a point out loud - and "I'll admit" is
+doing concession work there, not honesty-certification work. It reads
+as a guy talking, so it's fine. Use it rarely. "Honestly," and
+"Truthfully," have no such version; they only ever certify.
 
 ## Gender-neutral language
 
@@ -128,6 +139,7 @@ Before handing draft back:
 - [ ] No "delve", "landscape", "tapestry", "robust", "nuanced", "leverage" (verb), "ecosystem" (metaphor).
 - [ ] No signposting frames ("What's striking is...", "The thing that matters here...").
 - [ ] No record-scratch fragments staging the next paragraph.
+- [ ] No sincerity disclaimers ("Honestly,", "To be honest,", "Truthfully,", "Frankly,", "I'll admit,"). Only "Now, I'll admit..." survives, and rarely.
 - [ ] Opens with observation, not thesis.
 - [ ] Closes with a thought, not a summary.
 - [ ] If a quote does heavy lifting, no sentence announces that it does.
