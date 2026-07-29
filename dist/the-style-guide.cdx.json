@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:d0f19258-1717-47d6-b501-7ebdacd369de",
+  "serialNumber": "urn:uuid:2f56c0bb-ae0a-4c7d-b181-c57f1d9154bc",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-29T21:57:53Z",
+    "timestamp": "2026-07-29T22:02:30Z",
     "tools": [
       { "vendor": "the-skill-builder", "name": "build.sh", "version": "1.0" }
     ],
@@ -16,7 +16,7 @@
       "description": "A portable multi-style guide for writing and question-asking, holding named voices (Coté prose, Tyler Cowen questions, LinkedIn) and shared references.",
       "licenses": [ { "license": { "id": "CC0-1.0" } } ],
       "authors": [ { "name": "Coté" }, { "name": "Claude" } ],
-      "hashes": [ { "alg": "SHA-256", "content": "61c646ab216e285b89d8cec3eafef1baba94f9f9324fbcf37d0a532cce0c2a0d" } ]
+      "hashes": [ { "alg": "SHA-256", "content": "9afb97035389da6dc4b06dcf11f02a9af182e206d2d6e9aa852b563e31e00139" } ]
     }
   },
   "components": []

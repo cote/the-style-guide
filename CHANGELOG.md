@@ -17,6 +17,20 @@
 - `references/no-signposting.md`: normalized two `*Software Factory 2.0*`
   examples to `_underscore_` italics, which the formatting rules already
   required.
+- Rewrote the "HTML inside markdown" section in `references/formatting.md`.
+  Mix HTML in as needed but sparingly, and only where markdown can't
+  express the structure. Names the good uses (iframe video embeds, the
+  `<figure>` block) and the bad ones (a raw `<blockquote>` where
+  markdown's `>` works, plus headers/lists/links/emphasis/code). Adds
+  the caveat that inline HTML isn't supported by every renderer, so
+  check when you don't know what's rendering. Deleted the redundant
+  "Markdown over HTML, except where HTML is required" section, which
+  restated the same rule, and dropped both micro.blog mentions.
+- Removed `decoding="async"` from the `<figure>` pattern and its
+  required-attributes list. It was reverse-engineered from published
+  WordPress HTML, but WordPress has injected that attribute
+  automatically since 6.1, so the rule was codifying the platform's
+  output as a deliberate choice.
 
 ## 1.6 - 2026-07-28
 

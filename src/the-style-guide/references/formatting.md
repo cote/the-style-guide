@@ -117,11 +117,27 @@ posts: "(1) X. (2) Y. (3) Z."
 
 ## HTML inside markdown
 
-CommonMark passes inline HTML through. For blog and micro.blog posts,
-keep the body as markdown and drop HTML blocks only where you need
-specific structure: figures, iframes, authorship spans, etc. Don't
-convert the whole post to HTML - that throws away markdown processing
-for no reason and makes the post painful to edit later.
+CommonMark passes inline HTML through, so mix HTML into markdown as
+needed - but sparingly. Use it only where markdown can't express the
+structure.
+
+Good uses:
+
+- YouTube and other video embeds (`<iframe>`).
+- The `<figure>` block for uploaded images, described below.
+- Authorship spans and similar one-off structure.
+
+Bad uses: anything markdown already has syntax for. Blockquotes are the
+common mistake - use markdown's `>`, not a raw `<blockquote>`. Same for
+headers, lists, links, emphasis, and code.
+
+Never convert a whole post to HTML because a few parts of it use HTML.
+That throws away markdown processing for no reason and makes the post
+painful to edit later. Keep the body as markdown and drop in HTML blocks
+where they're needed.
+
+Inline HTML is not supported by every renderer. If you don't know what's
+rendering the output, check before relying on it.
 
 ## The `<figure>` block (uploaded images)
 
@@ -130,14 +146,13 @@ shape:
 
 ```html
 <figure>
-    <img decoding="async" src="/path/to/image.jpg" width="600" alt="Descriptive alt text"/>
+    <img src="/path/to/image.jpg" width="600" alt="Descriptive alt text"/>
     <figcaption>Caption text here.</figcaption>
 </figure>
 ```
 
 Rules:
 
-- **Always include `decoding="async"`** on the `<img>`.
 - **Always include `width="<px>"`** - lets the browser reserve space and matches the existing pattern.
 - **Use a path-relative `src`** (`/wp-content/uploads/YYYY/MM/...` for WordPress, `/uploads/...` for other static sites) by default. Use an absolute `https://...` URL only when the figure will be embedded somewhere off the origin site (newsletter sent to subscribers, cross-posted to another platform).
 - **No `class="..."`, no inline `style="..."`.** The site's CSS handles responsive sizing.
@@ -150,13 +165,3 @@ For a video embed, use a raw `<iframe>` block inside a markdown body:
 ```html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="..." frameborder="0" allow="..." allowfullscreen></iframe>
 ```
-
-## Markdown over HTML, except where HTML is required
-
-Default: write markdown. Drop HTML blocks (figures, iframes, authorship
-spans) where the structure needs them. Don't convert the whole post to
-HTML just because some parts of it use HTML.
-
-For platforms that take markdown (micro.blog, most blog engines, most
-newsletter tools), pass markdown directly - inline HTML passes through
-fine via CommonMark.
