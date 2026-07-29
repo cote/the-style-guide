@@ -106,11 +106,11 @@ it's going to.
 
 **Before:**
 
-> What's striking about reading the Fraser/Ho piece next to Kroger and Viray's *Software Factory 2.0* white paper, five years later, is how completely they predict each other.
+> What's striking about reading the Fraser/Ho piece next to Kroger and Viray's _Software Factory 2.0_ white paper, five years later, is how completely they predict each other.
 
 **After:**
 
-> The Fraser/Ho piece predicts Kroger and Viray's *Software Factory 2.0* white paper five years before it was written.
+> The Fraser/Ho piece predicts Kroger and Viray's _Software Factory 2.0_ white paper five years before it was written.
 
 "What's striking about X is Y" is the most common version of this tic.
 Just say Y.

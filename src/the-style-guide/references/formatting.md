@@ -36,8 +36,45 @@ Why: visual readability of the raw markdown, and underscores don't
 interfere with `*` used for lists. Both render identically in CommonMark,
 so it's purely a source-readability choice.
 
-For book titles, paper titles, podcast names: italics. (`_Moral Mazes_`,
-`_Software Factory 2.0_`.)
+See "Titles: italic vs quoted" below for which titles get italics.
+
+## Titles: italic vs quoted
+
+Follow MLA. The heuristic: **italics for the big thing, quotes for the
+small thing inside it.**
+
+Italics - the standalone, self-contained work:
+
+- Books: `_Moral Mazes_`
+- Journals, magazines, newspapers: `_The Atlantic_`
+- Films and TV series: `_Michael Clayton_`, `_Twin Peaks_`
+- Albums: `_Zen Arcade_`
+- Podcasts (the show): `_Software Defined Talk_`
+- Plays, long poems, works of visual art, standalone reports and white
+  papers: `_Software Factory 2.0_`
+
+Quotes - the piece contained in something bigger:
+
+- Articles and essays, including academic papers published in a journal
+  or proceedings: `"No Silver Bullet"`
+- Book chapters
+- Blog posts
+- Podcast episodes: `"Episode 512: the one about YAML"`
+- Songs: `"Pink Turns to Blue"`
+- TV episodes: `"The Suitcase"`
+- Short stories and short poems
+
+Two edge cases worth naming:
+
+- **A paper gets quotes, not italics.** It's an article in a journal or
+  proceedings, so it's the small thing. This is the rule people get
+  wrong most often.
+- **A white paper or standalone report gets italics** - it's published on
+  its own, not inside a container. If it appeared as an article on a
+  site, quote it instead.
+
+When in doubt, ask whether the thing was published inside another thing.
+If yes, quotes. If it stands alone, italics.
 
 ## Bold
 

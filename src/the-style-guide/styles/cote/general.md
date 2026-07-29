@@ -134,6 +134,7 @@ Before handing draft back:
 - [ ] Zero em-dashes (`—`). All dashes are ` - ` (space-hyphen-space).
 - [ ] Straight quotes only (`"` `'`), no smart/curly quotes.
 - [ ] Italics use `_underscore_`, not `*single-asterisk*`.
+- [ ] Titles follow MLA: italics for the standalone work (book, album, film, TV series, podcast, journal), quotes for the piece inside it (article, paper, blog post, song, episode, chapter).
 - [ ] No `**bold**` for emphasis in prose. Plain or italics.
 - [ ] No bold on URLs (auto-linkers capture the asterisks).
 - [ ] No "delve", "landscape", "tapestry", "robust", "nuanced", "leverage" (verb), "ecosystem" (metaphor).

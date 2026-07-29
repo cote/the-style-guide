@@ -34,7 +34,9 @@ Shared references (style-agnostic, loaded as-needed):
 
 - *formatting* - dashes (never em-), quotes (never smart), italics
   (`_underscore_`, never `*asterisk*`), never `**bold**` for
-  emphasis, the `<figure>` HTML pattern for uploaded images.
+  emphasis, MLA title rules (italics for the big standalone work,
+  quotes for the small piece inside it), the `<figure>` HTML pattern
+  for uploaded images.
 - *no-signposting* - the biggest AI-writing tic to strip on edit
   passes: "What's striking about X is...", "The thing that matters
   here is..." Worked before/after examples.

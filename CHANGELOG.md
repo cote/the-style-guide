@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.7 - 2026-07-29
+
+- Fixed the title-formatting rule in `references/formatting.md`. The old
+  line said "book titles, paper titles, podcast names: italics," which
+  got papers wrong. Replaced with MLA: italics for the standalone work
+  (book, journal, film, TV series, album, podcast, play, work of art,
+  standalone report or white paper), quotes for the piece contained
+  inside it (article, academic paper, book chapter, blog post, podcast
+  episode, song, TV episode, short story). Heuristic stated up front -
+  italics for the big thing, quotes for the small thing inside it - plus
+  two edge cases: a paper in a journal or proceedings gets quotes, a
+  standalone white paper keeps italics.
+- `styles/cote/general.md`: new self-edit checklist item for the title
+  rule.
+- `references/no-signposting.md`: normalized two `*Software Factory 2.0*`
+  examples to `_underscore_` italics, which the formatting rules already
+  required.
+
 ## 1.6 - 2026-07-28
 
 - New rule: sincerity disclaimers. Prefixes that certify a sentence as
