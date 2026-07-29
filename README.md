@@ -173,6 +173,18 @@ structural defaults, anti-patterns, and a self-edit checklist.
   retrieval date in the source notes at the bottom of each file
   that uses them.
 
+## Who wrote this
+
+Coté and Claude, working together across a lot of sessions. The rules
+come from Coté - his taste, his bans, the things that make him wince in
+a draft. Claude did most of the drafting, catalogued the sources, wrote
+the scanner, and got told when it was wrong. Commits carry a
+`Co-Authored-By: Claude` trailer where that's what happened.
+
+There's an obvious joke here about an AI maintaining a list of ways not
+to sound like an AI. The list is better for it - a lot of these rules
+exist because Claude produced the tic first and Coté banned it after.
+
 ## License
 
 CC0 / public domain. See LICENSE. Copy, modify, redistribute. The

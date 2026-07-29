@@ -97,7 +97,7 @@ if $PACKAGE; then
       "version": "1.6",
       "description": "A portable multi-style guide for writing and question-asking, holding named voices (Coté prose, Tyler Cowen questions, LinkedIn) and shared references.",
       "licenses": [ { "license": { "id": "CC0-1.0" } } ],
-      "authors": [ { "name": "Coté" } ],
+      "authors": [ { "name": "Coté" }, { "name": "Claude" } ],
       "hashes": [ { "alg": "SHA-256", "content": "$ZIP_SHA" } ]
     }
   },

@@ -70,7 +70,7 @@ posts: "(1) X. (2) Y. (3) Z."
 
 - Blog posts: `##` for top-level sections, `###` sparingly. Subheadings
   can be informal, sometimes playful.
-- Newsletters: `##` only. No sub-headers. (See newsletter section below.)
+- Newsletters: `##` only. No sub-headers.
 - Short-form social: no headers at all.
 
 ## Links
@@ -113,18 +113,6 @@ For a video embed, use a raw `<iframe>` block inside a markdown body:
 ```html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="..." frameborder="0" allow="..." allowfullscreen></iframe>
 ```
-
-## Newsletter-specific formatting
-
-For "Related to your interests" newsletter issues:
-
-- **Title**: `[Keywords from weird/interesting links] - Related to your interests, [Day]`
-- **Strapline**: `Also: [secondary topics]` - italicized, Harper's-Index-brief.
-- **Sections**: only `##` headers. No sub-headers anywhere. ICYMI section first (Coté's own new content), then `## Related to your interests`, `## Wastebook`, `## Logoff`.
-- **Link format**: `- [Title](URL) - annotation`. Use `//` to separate multiple thoughts in one annotation. Never auto-generate annotations - those are Coté's voice from his own notes.
-- **ICYMI** opens with this italicized subtitle verbatim: `_Original content published since last time._`
-- **Wastebook**: copy items verbatim. Never use the full title of a piece as link text - if no link text was supplied, use `[Here](URL)`.
-- **Footer**: every issue ends with `---` and a verbatim italicized subscribe line.
 
 ## Markdown over HTML, except where HTML is required
 
