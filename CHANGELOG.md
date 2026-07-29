@@ -26,6 +26,10 @@
   check when you don't know what's rendering. Deleted the redundant
   "Markdown over HTML, except where HTML is required" section, which
   restated the same rule, and dropped both micro.blog mentions.
+- `<figure>` blocks: when a URL is provided for the image, link both the
+  image and the caption. The `<img>` gets wrapped in an `<a>`, and the
+  entire caption becomes the anchor text rather than a word or phrase
+  inside it. Added a linked-form example alongside the plain one.
 - Removed `decoding="async"` from the `<figure>` pattern and its
   required-attributes list. It was reverse-engineered from published
   WordPress HTML, but WordPress has injected that attribute

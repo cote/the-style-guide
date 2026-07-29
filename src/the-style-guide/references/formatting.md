@@ -158,7 +158,17 @@ Rules:
 - **No `class="..."`, no inline `style="..."`.** The site's CSS handles responsive sizing.
 - **`alt` is required** and should describe the image substantively. For complex images (charts, infographics), spell out what the image shows, including readable text inside it.
 - **Drop the `<figcaption>` line entirely** when the image has no caption. Don't emit an empty `<figcaption></figcaption>`.
+- **When a URL is provided for the image, link both the image and the caption.** Wrap the `<img>` in an `<a href="...">`, and make the entire caption the anchor text - not just a word or phrase inside it. Same URL in both places. With no URL, use no `<a>` at all.
 - The 4-space indent inside `<figure>` is intentional - matches the existing pattern across his posts.
+
+Linked form:
+
+```html
+<figure>
+    <a href="https://example.com/source"><img src="/path/to/image.jpg" width="600" alt="Descriptive alt text"/></a>
+    <figcaption><a href="https://example.com/source">Caption text here.</a></figcaption>
+</figure>
+```
 
 For a video embed, use a raw `<iframe>` block inside a markdown body:
 
