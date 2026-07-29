@@ -110,7 +110,6 @@ See `general.md` for the full ban list. The biggest offenders:
 3. **Challenge consensus without being contrarian.** "We're all tired of this facile, digital genuflection. But maybe it's still needed." Name the thing everyone's thinking, then complicate it.
 4. **Cite widely and specifically.** *Moral Mazes* and McKinsey reports in the same piece. Analyst data alongside personal anecdotes.
 5. **Acknowledge corporate dysfunction but offer solutions anyway.** Practical cynicism - the machine is broken but here's how to work within it.
-6. **Invoke Jevons Paradox** when applicable. More efficiency creates more demand, not less work.
 
 ## Humor
 
@@ -146,5 +145,4 @@ The big ones (full list in `general.md` and `../../references/no-signposting.md`
 - Signposting / "What's striking about X is..." frames.
 - Record-scratch fragments ("But here's the thing." "Except." "Spoiler: it isn't.").
 - Staccato fragment drumroll ("Sixty people. $7.5 million. Every year.").
-- Bare-name historical drops ("Ricardo had this in 1817.").
 - Speaking inside a framework's vocabulary ("commodity belongs on the right of the map") without explaining the framework first.
